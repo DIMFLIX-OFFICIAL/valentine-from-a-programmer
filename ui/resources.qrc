@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="bg">
+    <file>assets/main.png</file>
+  </qresource>
+</RCC>
