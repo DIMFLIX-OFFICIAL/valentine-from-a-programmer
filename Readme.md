@@ -8,4 +8,4 @@
 `pyinstaller app.spec`
 
 # Команда билда, если не получилось с предыдущим
-`pyinstaller --noconfirm --onefile --windowed --add-data "ui.py;." --add-data "resources_rc.py;." --add-data "romantic.mp3;." --add-data "tragic.mp3;." "app.py"`
+`pyinstaller --noconfirm --onefile --windowed -i'icon.ico' --add-data "icon.ico;." --add-data "ui.py;." --add-data "resources_rc.py;." --add-data "romantic.mp3;." --add-data "tragic.mp3;." "app.py"`

@@ -5,7 +5,7 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[('./ui.py', '.'), ('./resources_rc.py', '.'), ('romantic.mp3', '.'), ('tragic.mp3', '.')],
+    datas=[('icon.ico', '.'), ('ui.py', '.'), ('resources_rc.py', '.'), ('romantic.mp3', '.'), ('tragic.mp3', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -34,4 +34,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['icon.ico'],
 )

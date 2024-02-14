@@ -3,7 +3,7 @@ import sys
 import time
 
 import PySide2
-from PySide2 import QtCore
+from PySide2 import QtCore, QtGui
 from pygame import mixer
 from PySide2.QtCore import QThread
 from PySide2.QtWidgets import QMainWindow, QApplication
@@ -54,6 +54,7 @@ class MainWindow(QMainWindow):
         self.romantic_music = PlaySound(resource_path('romantic.mp3'))
         self.tragic_music = PlaySound(resource_path('tragic.mp3'))
 
+        self.setWindowIcon(QtGui.QIcon(resource_path('icon.ico')))
         self.show()
         self.romantic_music.start()
 
@@ -76,5 +77,6 @@ class MainWindow(QMainWindow):
 if __name__ == '__main__':
     time.sleep(3)
     app = QApplication(sys.argv)
+    app.setWindowIcon(QtGui.QIcon(resource_path('icon.ico')))
     window = MainWindow()
     sys.exit(app.exec_())
