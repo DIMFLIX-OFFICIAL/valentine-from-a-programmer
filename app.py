@@ -1,6 +1,5 @@
 import os
 import sys
-import time
 
 import PySide2
 from PySide2 import QtCore, QtGui
@@ -8,7 +7,7 @@ from pygame import mixer
 from PySide2.QtCore import QThread
 from PySide2.QtWidgets import QMainWindow, QApplication
 
-from ui import Ui_MainWindow
+from ui.ui import Ui_MainWindow
 
 dirname = os.path.dirname(PySide2.__file__)
 plugin_path = os.path.join(dirname, 'plugins', 'platforms')
@@ -51,15 +50,15 @@ class MainWindow(QMainWindow):
         self.ui.accept_btn.clicked.connect(self.accept)
         self.ui.refuse_btn.clicked.connect(self.refuse)
 
-        self.romantic_music = PlaySound(resource_path('romantic.mp3'))
-        self.tragic_music = PlaySound(resource_path('tragic.mp3'))
+        self.romantic_music = PlaySound(resource_path('./assets/romantic.mp3'))
+        self.tragic_music = PlaySound(resource_path('./assets/tragic.mp3'))
 
-        self.setWindowIcon(QtGui.QIcon(resource_path('icon.ico')))
+        self.setWindowIcon(QtGui.QIcon(resource_path('./assets/icon.ico')))
         self.show()
         self.romantic_music.start()
 
     def accept(self):
-        self.ui.title.setText("Ураа, тогда завтра в 7, крошка :)")
+        self.ui.title.setText("Отлично, тогда жду тебя завтра в 7, крошка :)")
         self.ui.accept_btn.setText("До завтра!")
         self.ui.accept_btn.clicked.connect(self.close)
         self.ui.refuse_btn.hide()
@@ -75,8 +74,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == '__main__':
-    time.sleep(3)
     app = QApplication(sys.argv)
-    app.setWindowIcon(QtGui.QIcon(resource_path('icon.ico')))
+    app.setWindowIcon(QtGui.QIcon(resource_path('./assets/icon.ico')))
     window = MainWindow()
     sys.exit(app.exec_())

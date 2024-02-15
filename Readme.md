@@ -1,11 +1,10 @@
 ## Конвертация ui файла
-`pyside2-uic .\ui_main.ui > ui_main.py`
+`cd ui`
+`pyside2-uic .\ui_main.ui > ui.py`
 
 ## Конвертация файла ресурсов
+`cd ui`
 `pyside2-rcc resources.qrc -o resources_rc.py`
 
 ## Билд
 `pyinstaller app.spec`
-
-# Команда билда, если не получилось с предыдущим
-`pyinstaller --noconfirm --onefile --windowed -i'icon.ico' --add-data "icon.ico;." --add-data "ui.py;." --add-data "resources_rc.py;." --add-data "romantic.mp3;." --add-data "tragic.mp3;." "app.py"`
