@@ -8,5 +8,6 @@ https://github.com/DIMFLIX-OFFICIAL/valentine-from-a-programmer/assets/112165977
 `cd ui`
 `pyside2-rcc resources.qrc -o resources_rc.py`
 
-## Билд
+## Build
 `pyinstaller app.spec`
+ 
