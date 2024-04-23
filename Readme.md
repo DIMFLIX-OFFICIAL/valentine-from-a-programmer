@@ -10,4 +10,3 @@ https://github.com/DIMFLIX-OFFICIAL/valentine-from-a-programmer/assets/112165977
 
 ## Build
 `pyinstaller app.spec`
- 
